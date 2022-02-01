@@ -1,0 +1,54 @@
+```{css, echo = FALSE}
+
+.cover-card .author_name {
+    display: block;
+    color: #15275a;
+    font-size: 2em;
+}
+
+.table {
+    display: table;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.author_name{
+    color: #0c345c;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    line-height: 1em;
+    margin-top: 50px;
+    font-size: 1.9em;
+}
+
+h1, h2, h3{
+    color: #0c345c;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.9em;
+  }
+
+.cover {
+  width: 1cm;
+}
+
+th {
+    background-color: #15275a;
+    color: #fff;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    padding: 0px 12px;
+    border-bottom: 1px solid #111;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 1px 3px;
+}
+
+#post {
+    font-size: 0.8em;
+    padding-bottom: 40px;
+}
+
+```

@@ -1,0 +1,48 @@
+---
+title: "Boletim estatístico<br>ESTAT/SGE"
+date: " Data: `r format(Sys.Date(), format='%d/%m/%Y')`"
+encoding: "UTF-8"
+output:
+  prettydoc::html_pretty:
+    css: custom.css
+    logo: "images/logo.png"
+    theme: leonids
+    highlight: github
+---
+
+```{r, results="asis", echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
+
+library(DT)
+library(tidyverse)
+library(scales)
+library(patchwork)
+library(tidyr)
+library(ggrepel)
+library(janitor)
+library(gt)
+```
+
+
+```{r, echo=FALSE}
+# Logo
+htmltools::img(src = knitr::image_uri(file.path("images", "logo.png")), 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:0; padding:20px;')
+```
+
+
+### Estatísticas gerais
+
+```{r tabela1, echo=FALSE, warning=FALSE}
+# Esboço
+
+boletim_stat <- readxl::read_excel("dados/boletim-stat.xlsx")
+
+DT::datatable(boletim_stat, extensions = 'Buttons', options = list(
+  dom = 'Bfrtip',
+  buttons = c('copy', 'csv', 'excel', 'pdf', 'print','colvis'), pageLength = 50
+)
+)
+
+```
